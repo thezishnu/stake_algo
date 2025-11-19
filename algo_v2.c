@@ -35,15 +35,14 @@ int main(){
 
         int profit_or_loss = rand() % 2;
         
-        // FIXED: Check continuous profit BEFORE processing
         if(profit_or_loss == 1 && continuous_profit >= 4){
-            profit_or_loss = 0; // Force it to be a loss
+            profit_or_loss = 0; 
         }
         
         if(profit_or_loss == 1){
             current_amount += trade_input;
             total_profit += trade_input;
-            continuous_profit++; // ADDED: Increment profit counter
+            continuous_profit++; 
             printf("Trade %d: Profit! Current amount: %d\n", i+1, current_amount);
             trade_input = initial_trade_input;
             continuous_loss = 0;
