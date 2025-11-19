@@ -35,9 +35,8 @@ int main(){
 
         int profit_or_loss = rand() % 2;
         if(profit_or_loss == 1){
-            continuous_profit++;
-            if(continuous_profit >= 4){ profit_or_loss = 0;  
-        }
+            if (continuous_profit >=4) profit_or_loss = 0;
+            
             current_amount += trade_input;
             total_profit += trade_input;
             printf("Trade %d: Profit! Current amount: %d\n", i+1, current_amount);
