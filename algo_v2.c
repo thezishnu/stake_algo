@@ -3,20 +3,22 @@
 #include <time.h>
 
 int main(){
-    int current_amount, trade_input, trade_times;
-    int initial_amount;
-    int initial_trade_input;
+    float current_amount;
+    int trade_times;
+    float trade_input;
+    float initial_amount;
+    float initial_trade_input;
     int continuous_profit = 0;
     int continuous_loss = 0;
-    int total_profit = 0;
+    float total_profit = 0;
     srand(time(0));
 
     printf("Enter current amount: ");
-    scanf("%d", &current_amount);
+    scanf("%f", &current_amount);
     initial_amount = current_amount;
     
     printf("Enter trade input amount: ");
-    scanf("%d", &trade_input);
+    scanf("%f", &trade_input);
     initial_trade_input = trade_input;
     
     printf("Enter number of trades you want to make: ");
@@ -57,10 +59,10 @@ int main(){
     }
 
     printf("\n=== Trading Summary ===\n");
-    printf("Initial Balance: %d\n", initial_amount);
-    printf("Final Balance: %d\n", current_amount);
-    printf("Total Profit/Loss: %+d\n", total_profit);
-    printf("Net Change: %+d\n", current_amount - initial_amount);
+    printf("Initial Balance: %.2f\n", initial_amount);
+    printf("Final Balance: %.2f\n", current_amount);
+    printf("Total Profit/Loss: %+f\n", total_profit);
+    printf("Net Change: %+f\n", current_amount - initial_amount);
 
     return 0;
 }
